@@ -1,0 +1,24 @@
+---
+title: "Welcome to MT4007, Statistical Data Processing"
+output:
+  html_document:
+    self_contained: true
+    toc: false
+    toc_depth: 2
+---
+
+This is the course web-site for Statistical Data Processing [MT4007](https://sisu.it.su.se/search/archive_info/MT4007) at the [department of Mathematics](http://www.math.su.se/), [Stockholm University](http://www.su.se/). The course gives an
+introduction to obtaining, wrangling, exploring and visualising data using R. Main literature will be the book [R for Data Science](http://r4ds.had.co.nz/index.html) by Grolemund and Wickham complemented by courses from [DataCamp](https://www.datacamp.com/home).
+
+### Moodle page
+
+The github course page is supplemented by a [Moodle page](https://kurser.math.su.se/course/view.php?id=1086), which requires an SU login. _All lectures will be given on zoom this year_. The link for the classroom can be found on the moodle webpage. 
+
+### Examination
+Examination consists of
+
+ * [Weekly individual homework assignments with sharp deadlines and peer review.](HW.html)
+ * [An electronic exam (date: 2021-12-22).](exam.html)
+ * [An individual project.](project.html)
+ 
+Note that DataCamp assignments are not part of the examination.

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Project (3hp, grade A-F)</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Statical Data Processing (MT4007)</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="schedule.html">Schedule</a>
+</li>
+<li>
+  <a href="HW.html">Homework</a>
+</li>
+<li>
+  <a href="exam.html">Exam</a>
+</li>
+<li>
+  <a href="project.html">Project</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Project (3hp, grade A-F)</h1>
+
+</div>
+
+
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<p>The final part of the course involves an individual project, taking shape as a data blog post. This should illustrate an issue/problem using an unique data set collected by yourself and at the same time illustrate the use of tools taught in this course. Deadline for the project is <strong>2022-01-12 at 18:00</strong>. Hand-in occurs by raising an issue with the title “Project ready for grading” in your <code>PR_&lt;github_username&gt;</code> repository. Shortly after the deadline, we will clone all project repos with such an issue to a local installation. This version will count as your hand-in version. On <strong>2022-01-14</strong> the projects will be presented orally (5 minutes presentation) - presence is compulsory for the session you are presenting in, so please reserve that day in your calendar.</p>
+</div>
+<div id="inspiration" class="section level2">
+<h2>Inspiration</h2>
+<p>The below blog posts could be viewed as inspiration or to give a rough idea of the amount of work expected in the projects.</p>
+<ul>
+<li><a href="http://staff.math.su.se/hoehle/blog/2016/08/21/gapMedal.html">The Olympic Medal Table Visualized Gapminder Style.</a> <a href="https://github.com/hoehleatsu/hoehleatsu.github.io/blob/master/_source/2016-08-21-gapMedal.Rmd">[.Rmd]</a></li>
+<li><a href="http://staff.math.su.se/hoehle/blog/2017/03/25/scbnames.html">On a First Name Basis with Statistics Sweden</a> [<a href="https://github.com/hoehleatsu/hoehleatsu.github.io/blob/master/_source/2017-03-25-scbnames.Rmd">.Rmd</a>]</li>
+<li><a href="https://shirinsplayground.netlify.app/2020/09/baby_weight_app/">Baby Weight Shiny app</a></li>
+<li><a href="http://www.masalmon.eu/2018/01/01/sortinghat/">Are #python users more likely to get into Slytherin?</a></li>
+</ul>
+<p>Look for more inspiration at, e.g., <a href="https://rweekly.org/">R Weekly</a> or <a href="https://www.r-bloggers.com/">R-Bloggers</a>.</p>
+<p>Data sources: During the course, you were introduced to a lot of possible data sources. Additional public web based data sources could, e.g., be the <a href="https://dataportalen.stockholm.se/dataportalen/">Stockholm Open Data Portal</a> or the <a href="https://oppnadata.se/#noscroll">Öppna Data</a> site. Another example of a contemporary website for relevant data is the <a href="https://www.folkhalsomyndigheten.se/smittskydd-beredskap/utbrott/aktuella-utbrott/covid-19/statistik-och-analyser/bekraftade-fall-i-sverige/">COVID-19 data</a> page by the Swedish Folkhälsomyndigheten.</p>
+</div>
+<div id="details" class="section level2">
+<h2>Details</h2>
+<p>The project work has the following elements:</p>
+<ol style="list-style-type: lower-alpha">
+<li>find data out in the wild - this can be an open-access SQL database, API data<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>, web scraping data, personal surveillance data (e.g., running watch, log-files), data collected as part of a hobby, … The raw data should not be of sensitive nature (data protection!) and should be accessible and uploadable to Github without violating any copyright or access rights.</li>
+<li>determine a good story you can tell based on the data, e.g., a specific hypothesis you want to investigate, a cool visualization of numbers, a data journalism type of story, an educative <code>#rstats</code> post, something which might interest your fellow students. Your post can be about a serious matter, but it can also be a not so serious matter. However, make it clear before writing who is your intended readership (general public, fellow B.Sc. students, R users, ornotologists, …)</li>
+<li>read the data, wrangle the data, visualize the data, make simple statistical summaries and interpret the results in accordance with the selected story you chose in b.</li>
+<li>Write a story worthwhile reading for the selected target audience - it can be written in Swedish or English. The story needs to be written as a reproducible R-Markdown document with HTML backend (see technical details) and should not be excessively long. As a rough guideline: Between 1000-1500 words in the text, no more than 7 figures. No more than 7 visible code chunks (if you decide to have any at all). Note: You can use the <a href="https://github.com/benmarwick/wordcountaddin"><code>wordcountaddin</code></a> for RStudio to count the words in your report.</li>
+<li>Create a 5 minute presentation about your work to present to your fellow students on 2022-01-14. The main aim of your presentation is to convince your fellow students that they should read your blog post. A template for this will be made available within the next days.</li>
+</ol>
+<p>The biggest challenge of the project will be to be realistic about what you can achieve within the given deadline. Once you have an estimate of how much that could be, take 50% of that and you are still likely to be busy. Make sure you have a working project early on and then scale up iteratively, so you’re always ready. Start early.</p>
+</div>
+<div id="technical-details" class="section level2">
+<h2>Technical details</h2>
+<p>For every student we will create a private <code>PR_&lt;username&gt;</code> GitHub repository as part of the <a href="https://github.com/MT4007-HT21">MT4007-HT21 organisation</a>, which only you and the teachers of the course have read/write access to (similar setup as your <code>HW_&lt;username&gt;</code> repo) You should make sub-directories <code>Data</code>, <code>R</code>, <code>Report</code> and <code>Presentation</code> and store all your files there. At the project deadline we will pull all repos, which have an issue “Project work submitted”.</p>
+<p>At submission, your repo should at least contain the following files:</p>
+<pre><code>PR_jensjensen/Report/report.Rmd
+PR_jensjensen/Report/report.html
+PR_jensjensen/Presentation/presentation.Rmd
+PR_jensjensen/Presentation/presentation.html</code></pre>
+<p>where <code>jensjensen</code> is to be substituted with your GitHub user name. Note: It’s important to pick exactly the filenames as above, since we will extract report and presentation automatically from your repository. Furthermore, ensure that any support files like data files, graphics, etc. which are needed to compile the .Rmd documents, are part of the repository. One exception are data aquired by using private API-keys. To this end, make a <code>R/query_data.R</code> script, which imports the API key stored somewhere outside the git, does all the work and finally stores the data using <code>save</code> in the <code>Data</code> directory. Your R Markdown report should then access the data by using <code>load</code>.</p>
+<p>The data remain private as part of the <code>PW_&lt;username&gt;</code> repository, but your project report HTML-file will be made accessible to the teachers and students of the course.</p>
+<p>In contrast to the homework exercises we use HTML as backend, see e.g. <a href="https://bookdown.org/yihui/rmarkdown/html-document.html">Section 3.1</a> of the <em>R Markdown: The definite guide</em> for options to customize. In order to ensure portability of the HTML reports please use the following as part of your YAML header:</p>
+<pre><code>----
+title: The snappy title of your project
+author: Jens Jensen &lt;jens.jensen@student.su.se&gt;
+date: 2021-01-15
+output:
+  html_document:
+    self_contained: true
+    toc: true
+    toc_depth: 2
+---</code></pre>
+<p>Additional note: It’s possible that we succeed in creating a project repo template, which already contains some of the necessary files and directories.</p>
+<p>Final note: For the presentation the data wrangling steps do not need to be repeated. One can either import all data generated by <code>report.Rmd</code> using <code>load</code> or use some other type of caching.</p>
+</div>
+<div id="grading" class="section level2">
+<h2>Grading</h2>
+<p>The project will be graded based on the following five dimensions, which have equal weight:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Technical difficulty of the project (e.g. how hard to get the data imported, how much time needed to wrangle, how advanced are some of the methods to get statistical summaries, how original is the project idea)</li>
+<li>Coding style and reproducibility of the Rmd file. This includes an assessment of, whether problems were solved tidyverse style.</li>
+<li>Quality of the visualisations and their interpretation.</li>
+<li>Readability of the project report (is the story concise, are the aims clear, is the readership happy, spelling &amp; grammar). In particular: Less is sometimes more!</li>
+<li>Quality of the presentation (slides, snore factor, <strong>staying in time</strong>, …)</li>
+</ol>
+<p><strong>Lycka till!</strong></p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>If you want to use SCB data extractable by their web interface, please us the <a href="https://cran.r-project.org/web/packages/pxweb/index.html"><code>pxweb</code></a> package for this instead.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

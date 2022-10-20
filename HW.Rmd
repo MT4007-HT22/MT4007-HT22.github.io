@@ -1,0 +1,29 @@
+---
+title: "Individual homework (3 hp, grade: PASS/FAIL)"
+output:
+  html_document:
+    self_contained: true
+    toc: false
+    toc_depth: 2
+editor_options: 
+  chunk_output_type: console
+---
+
+Six homework assignments should be solved and uploaded on GitHub at the latest **23:59** on their respective date of deadline. These should be solved individually. The assignments also involves peer review of another students solution - the deadline for this is the Wednesday following the Sunday deadline. Further information about the student peer review is typically provided at
+the [nyhetsforum](https://kurser.math.su.se/mod/forum/view.php?id=66752) of kurser.math.su.se.
+
+
+
+```{r, echo =FALSE}
+HW <- c(
+    "[HW1: GitHub test-run](homework/HW1.html)",
+    "[HW2: Basic tidyverse](homework/HW2.html)",
+    "[HW3: Working with tables](homework/HW3.html)",
+    "[HW4: SQL and 6th graders](homework/HW4.html)",
+    "[HW5: Nobel tweets](homework/HW5.html)",
+    "[HW6: Nobel prize winning project](homework/HW6.html)",
+    "[HW7: Cleanup!](homework/HW7.html)"
+)
+deadline <- c(seq(as.Date("2021/11/07"), by = "week", length.out = 6), "2022-03-31")
+knitr::kable(data.frame(Homework = HW, Deadline = deadline))
+```
