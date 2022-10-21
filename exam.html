@@ -13,7 +13,7 @@
 
 <title>Electronic exam (1.5 hp, betyg A-F)</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -60,6 +60,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -80,6 +81,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -232,7 +236,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -273,32 +277,59 @@ $(document).ready(function () {
 </div>
 
 
-<p>An electronic exam, 1.5 hp, is scheduled on <strong>2021-12-22</strong>. It will be a open book home exam and its allowed to use google. We reserve the right to conduct an oral exam after the exam, e.g. when we are correcting the exam. If you are subject to the oral exam, you will need to describe your code, what it does and why you chose to solve the question(s) the way you did. This will test your skills in using the tools introduced in the course and involves live coding in an RStudio environment with internet access. Here is some further information</p>
+<p>An electronic exam, 1.5 hp, is scheduled on
+<strong>2023-01-05</strong>. It will be a open book home exam and its
+allowed to use google. We reserve the right to conduct an oral exam
+after the exam, e.g., when we are correcting the exam. If you are
+subject to the oral exam, you will need to describe your code, what it
+does and why you chose to solve the question(s) the way you did. This
+will test your skills in using the tools introduced in the course and
+involves live coding in an RStudio environment with internet access.
+Here is some further information</p>
 <ol style="list-style-type: decimal">
-<li>There will be four questions, at least one of them will be from the class questions listed below.</li>
-<li>The exam will be available on <a href="https://github.com/MT4007-HT21/exam_20211222">here, on Github on the 22/12 12:00</a> which you will download (however you choose to).</li>
-<li><strong>You hand in your exam answers in a .Rmd (code and accompanying text) through <a href="https://kurser.math.su.se/mod/assign/view.php?id=71192">this link</a>. If you have extended time for the exam (förlängd skrivningstid) then its <a href="https://kurser.math.su.se/mod/assign/view.php?id=71397">this link</a>.</strong></li>
+<li>There will be four questions, at least one of them will be from the
+class questions listed below.</li>
+<li>The exam will be available on <a
+href="https://github.com/MT4007-HT22/exam_20230501">here, on Github on
+the 05/01 12:00</a> which you will download (however you choose
+to).</li>
+<li><strong>You hand in your exam answers in a .Rmd (code and
+accompanying text) through <a
+href="https://kurser.math.su.se/mod/assign/view.php?id=76579">this
+link</a>. If you have extended time for the exam (förlängd
+skrivningstid) then its <a
+href="https://kurser.math.su.se/mod/assign/view.php?id=76580">this
+link</a>.</strong></li>
 </ol>
-<p>List of questions from the class questions which might appear in the exam:</p>
+<p>List of questions from the class questions which might appear in the
+exam:</p>
 <ul>
 <li>Day 2-3: All exercises (and/or sections thereof)</li>
 <li>Day 4: systembolaget, winter medals</li>
 <li>Day 5: all exercises</li>
 <li>Day 6: all exercises (not the last optional)</li>
 <li>Day 7: all exercises</li>
-<li>Day 9: A csv-reader, Motions of the Riksdag, Sentiment of the people of Hemsö</li>
+<li>Day 9: A csv-reader, Motions of the Riksdag, Sentiment of the people
+of Hemsö</li>
 </ul>
-<p>Use the following set of code to verify that you have the appropriate packages installed.</p>
-<pre><code>lib_list &lt;- c(&quot;tidyverse&quot;,&quot;rmarkdown&quot;, &quot;knitr&quot;, &quot;DBI&quot;, &quot;RSQLite&quot;, &quot;rebus&quot;, &quot;jsonlite&quot;,&quot;xml2&quot;, &quot;lubridate&quot;, &quot;readxl&quot;)
+<p>Use the following set of code to verify that you have the appropriate
+packages installed.</p>
+<pre><code>lib_list &lt;- c(&quot;tidyverse&quot;,&quot;rmarkdown&quot;, &quot;knitr&quot;, &quot;DBI&quot;, &quot;RSQLite&quot;, &quot;rebus&quot;, 
+              &quot;jsonlite&quot;,&quot;xml2&quot;, &quot;lubridate&quot;, &quot;readxl&quot;)
 purrr::walk(lib_list, library, character.only = TRUE)</code></pre>
-<p>Here are some good <a href="https://www.rstudio.com/resources/cheatsheets/">cheat cheets</a> for easy access to information. Note that there are sheets with information that we do not cover in this course. Here is one on <a href="http://files.zeroturnaround.com/pdf/zt_sql_cheat_sheet.pdf">SQL</a>.</p>
+<p>Here are some good <a
+href="https://www.rstudio.com/resources/cheatsheets/">cheat cheets</a>
+for easy access to information. Note that there are sheets with
+information that we do not cover in this course. Here is one on <a
+href="http://files.zeroturnaround.com/pdf/zt_sql_cheat_sheet.pdf">SQL</a>.</p>
 <div id="re-exam" class="section level2">
 <h2>Re-exam</h2>
-<p>The re-exam is scheduled in February <strong>9/2 2022 12:00-16:00</strong>.</p>
-</div>
-<div id="old-exams-can-be-found-here" class="section level2">
-<h2><a href="https://github.com/MT4007-HT21/old_exams">Old exams can be found here</a></h2>
+<p>The re-exam is scheduled for <strong>2023-02-20</strong>.</p>
+<div id="old-exams-can-be-found-here" class="section level3">
+<h3><a href="https://github.com/MT4007-HT22/old_exams">Old exams can be
+found here</a></h3>
 <p>Only a few of the exams have solutions to them.</p>
+</div>
 </div>
 
 

@@ -13,7 +13,7 @@
 
 <title>Welcome to MT4007, Statistical Data Processing</title>
 
-<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -141,15 +141,11 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark the anchor link active (and if it's in a dropdown, also mark that active)
-  var dropdown = menuAnchor.closest('li.dropdown');
-  if (window.bootstrap) { // Bootstrap 4+
-    menuAnchor.addClass('active');
-    dropdown.find('> .dropdown-toggle').addClass('active');
-  } else { // Bootstrap 3
-    menuAnchor.parent().addClass('active');
-    dropdown.addClass('active');
-  }
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -294,7 +290,7 @@ href="https://www.datacamp.com/home">DataCamp</a>.</p>
 <div id="moodle-page" class="section level3">
 <h3>Moodle page</h3>
 <p>The github course page is supplemented by a <a
-href="https://kurser.math.su.se/course/view.php?id=1086">Moodle
+href="https://kurser.math.su.se/course/view.php?id=1206">Moodle
 page</a>, which requires an SU login. The link for the classroom can be
 found on the moodle webpage.</p>
 </div>
@@ -304,7 +300,7 @@ found on the moodle webpage.</p>
 <ul>
 <li><a href="HW.html">Weekly individual homework assignments with sharp
 deadlines and peer review.</a></li>
-<li><a href="exam.html">An electronic exam (date: 2021-12-22).</a></li>
+<li><a href="exam.html">An electronic exam (date: 2023-01-05).</a></li>
 <li><a href="project.html">An individual project.</a></li>
 </ul>
 <p>Note that DataCamp assignments are not part of the examination.</p>

@@ -1,5 +1,5 @@
 ---
-title: "Schedule HT21"
+title: "Schedule HT22"
 output:
   html_document:
     self_contained: true
@@ -9,7 +9,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-Note that "Handledning" starts at **09:30**! 
+Note that "Handledning" usually starts at **09:30**! 
 On Mondays you will have your peer review assigned, please do that the first hour. On Thursdays, you will either need to work with resubmissions of your hand in or by yourself.
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -21,7 +21,7 @@ suppressPackageStartupMessages(library(tidyverse))
 suppressPackageStartupMessages(library(knitr))
 
 # Byt https mot aktuell schemalänk nedan
-TimeEdit_URL <- "https://cloud.timeedit.net/su/web/stud1/ri107555X15Z06Q6Z96g0Y65y5066Y35Q01gQY6Q55737.json"
+TimeEdit_URL <- "https://cloud.timeedit.net/su/web/stud1/ri161XQQ507Z50Qv57093gZ6y3Y7906Q5Y65Y1.json"
 datum <- unique(fromJSON(TimeEdit_URL, flatten = TRUE)$reservations) %>% 
     mutate(veckodag = weekdays(as.Date(startdate)), 
            tid = paste(starttime, endtime, sep = "-")) %>% 
@@ -66,7 +66,7 @@ topics <- remove_url_from_topics(topics, from_lecture_number=from_lecture_number
 ```
 
 ```{r TIMEEDIT, echo = FALSE, message=FALSE, warning=FALSE, results="asis"}
-cat(paste0("<p>The schedule of the MT4007 HT21 course is automatically fetched from [TimeEdit](",stringr::str_replace(TimeEdit_URL,"\\.json",""),").<br><br></p>"))
+cat(paste0("<p>The schedule of the MT4007 HT22 course is automatically fetched from [TimeEdit](",stringr::str_replace(TimeEdit_URL,"\\.json",""),").<br><br></p>"))
 ```
 ```{r KABLESCHEDULE, echo = FALSE}
 tibble(Lecture = seq_len(length(topics)), 

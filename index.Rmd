@@ -12,13 +12,13 @@ introduction to obtaining, wrangling, exploring and visualising data using R. Ma
 
 ### Moodle page
 
-The github course page is supplemented by a [Moodle page](https://kurser.math.su.se/course/view.php?id=1086), which requires an SU login.  The link for the classroom can be found on the moodle webpage. 
+The github course page is supplemented by a [Moodle page](https://kurser.math.su.se/course/view.php?id=1206), which requires an SU login. The link for the classroom can be found on the moodle webpage. 
 
 ### Examination
 Examination consists of
 
  * [Weekly individual homework assignments with sharp deadlines and peer review.](HW.html)
- * [An electronic exam (date: 2021-12-22).](exam.html)
+ * [An electronic exam (date: 2023-01-05).](exam.html)
  * [An individual project.](project.html)
  
 Note that DataCamp assignments are not part of the examination.

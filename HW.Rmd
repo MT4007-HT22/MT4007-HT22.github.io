@@ -10,7 +10,7 @@ editor_options:
 ---
 
 Six homework assignments should be solved and uploaded on GitHub at the latest **23:59** on their respective date of deadline. These should be solved individually. The assignments also involves peer review of another students solution - the deadline for this is the Wednesday following the Sunday deadline. Further information about the student peer review is typically provided at
-the [nyhetsforum](https://kurser.math.su.se/mod/forum/view.php?id=66752) of kurser.math.su.se.
+the [nyhetsforum](https://kurser.math.su.se/mod/forum/view.php?id=76566) of kurser.math.su.se.
 
 
 
@@ -24,6 +24,6 @@ HW <- c(
     "[HW6: Nobel prize winning project](homework/HW6.html)",
     "[HW7: Cleanup!](homework/HW7.html)"
 )
-deadline <- c(seq(as.Date("2021/11/07"), by = "week", length.out = 6), "2022-03-31")
+deadline <- c(as.character(seq(as.Date("2022/11/13"), by = "week", length.out = 6)), "-TBA-")
 knitr::kable(data.frame(Homework = HW, Deadline = deadline))
 ```
