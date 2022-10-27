@@ -17,12 +17,18 @@ the [nyhetsforum](https://kurser.math.su.se/mod/forum/view.php?id=76566) of kurs
 ```{r, echo =FALSE}
 HW <- c(
     "[HW1: GitHub test-run](homework/HW1.html)",
-    "[HW2: Basic tidyverse](homework/HW2.html)",
-    "[HW3: Working with tables](homework/HW3.html)",
-    "[HW4: SQL and 6th graders](homework/HW4.html)",
-    "[HW5: Nobel tweets](homework/HW5.html)",
-    "[HW6: Nobel prize winning project](homework/HW6.html)",
-    "[HW7: Cleanup!](homework/HW7.html)"
+    "HW2: Basic tidyverse",
+    "HW3: Working with tables",
+    "HW4: SQL and 6th graders",
+    "HW5: Nobel tweets",
+    "HW6: Nobel prize winning project",
+    "HW7: Cleanup!"
+    # "[HW2: Basic tidyverse](homework/HW2.html)",
+    # "[HW3: Working with tables](homework/HW3.html)",
+    # "[HW4: SQL and 6th graders](homework/HW4.html)",
+    # "[HW5: Nobel tweets](homework/HW5.html)",
+    # "[HW6: Nobel prize winning project](homework/HW6.html)",
+    # "[HW7: Cleanup!](homework/HW7.html)"
 )
 deadline <- c(as.character(seq(as.Date("2022/11/13"), by = "week", length.out = 6)), "-TBA-")
 knitr::kable(data.frame(Homework = HW, Deadline = deadline))
