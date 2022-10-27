@@ -1,15 +1,15 @@
-Grading criteria of the MT5013 course - ht2019
+Grading criteria of the MT5013 course - ht2022
 ================
 Michael Höhle
-2019-11-06
+2022-10-21
 
 The present document operationalises the description found in the
 [course plan](https://sisu.it.su.se/pdf_creator/33466/44998), which
 consists of 3 parts:
 
-  - Homework lab exercises (3 ECTS)
-  - Written exam (1.5 ECTS)
-  - Project work (3 ECTS)
+-   Homework lab exercises (3 ECTS)
+-   Written exam (1.5 ECTS)
+-   Project work (3 ECTS)
 
 ## Criterion for each submodule
 
@@ -33,7 +33,7 @@ leads to one grade on the A-F scale.
 
 ## Combining the three grades
 
-One has to get a pass grade (i.e. ‘G’ for the binary grade and ‘E’ or
+One has to get a pass grade (i.e. ‘G’ for the binary grade and ‘E’ or
 better for the character grade) in each of the three momenter to pass
 the entire course. Subject to the homework labs being passed, a weighted
 mean of the grade from the exam and project is performed using the ECTS
@@ -52,8 +52,15 @@ In R code:
 ######################################################################
 
 suppressPackageStartupMessages(library(tidyverse))
+```
 
+    ## Warning: package 'tidyr' was built under R version 4.1.2
 
+    ## Warning: package 'readr' was built under R version 4.1.2
+
+    ## Warning: package 'dplyr' was built under R version 4.1.2
+
+``` r
 #' Define the measuring scales (character grade and pass/fail grade)
 betyg_char <- rev(letters[1:6])
 betyg_ug <- c("u","g")
@@ -114,10 +121,8 @@ grade_df <- grade_df %>% arrange(desc(lab), desc(exam), desc(projekt)) %>% rowwi
 grade_df %>% print(n=nrow(grade_df))
 ```
 
-    ## Source: local data frame [72 x 5]
-    ## Groups: <by row>
-    ## 
-    ## # A tibble: 72 x 5
+    ## # A tibble: 72 × 5
+    ## # Rowwise: 
     ##    lab   exam  projekt weighted_grade final_grade
     ##    <fct> <fct> <fct>            <dbl> <chr>      
     ##  1 g     a     a                 5    a          
@@ -138,7 +143,7 @@ grade_df %>% print(n=nrow(grade_df))
     ## 16 g     c     d                 2.33 d          
     ## 17 g     c     e                 1.67 d          
     ## 18 g     c     f                 0    f          
-    ## 19 g     d     a                 4.00 b          
+    ## 19 g     d     a                 4    b          
     ## 20 g     d     b                 3.33 c          
     ## 21 g     d     c                 2.67 c          
     ## 22 g     d     d                 2    d          
