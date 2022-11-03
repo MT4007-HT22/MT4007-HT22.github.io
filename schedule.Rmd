@@ -9,7 +9,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-Note that "Handledning" usually starts at **09:30**! 
+Note that the *Handledning* (lecture/tutorial) starts at **09:30**! 
 On Mondays you will have your peer review assigned, please do that the first hour. On Thursdays, you will either need to work with resubmissions of your hand in or by yourself.
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -30,23 +30,41 @@ datum <- unique(fromJSON(TimeEdit_URL, flatten = TRUE)$reservations) %>%
     distinct() %>%
   filter(startdate>=ymd("2022-11-07"))
 topics <- c(
-    "[**Lecture**: Introduction. Software, GitHub and Markdown.](class_instructions/day1.html) [[Slides](slides/slide1.html)],  _Handledning starts as soon as lecture is done._",
-    "[**Lecture**: Tidyverse, Basic dplyr and ggplot2.](class_instructions/day2.html) [[Slides](slides/slide2.html)] [[Video](https://video.su.se/media/Dag%202%20-%20readr%2C%20dplyr%2C%20pipes%20%26%20ggplot/0_e7cf1v9a)], _Handledning starts as soon as lecture is done._",
-    "[Tidyverse: group_by and summarise, more ggplot2.](class_instructions/day3.html), _Peer review 08:45-09:30, handledning 09:30-11:30_",
-    "[Exploratory data analysis](class_instructions/day4.html), _Resubmissions 08:45-09:30, handledning 09:30-11:30_",
-    "[Cleaning data: Tidy data. Long to wide and back.](class_instructions/day5.html), _Peer review 08:45-09:30, handledning 09:30-11:30_",
-    "[Relational data: Combining tables with dplyr joins.](class_instructions/day6.html), _Resubmissions 08:45-09:30, handledning 09:30-11:30_",
-    "[Relational data: SQL basics](class_instructions/day7.html), _Peer review 08:45-09:30, handledning 09:30-11:30_",
-    # "**Guest Lecture** 08:45: Jan Alexandersson, Quantitative analyst, Abios, will do a lecture on principles of visualisation. [[Slides](slides/slide14.html)], _Resubmission and handledning starts after lecture. There are no lecture notes today!_",
+    "[**Lecture**: Introduction. Software, GitHub and Markdown.](class_instructions/day1.html) [Slides],  _We start at 9am. Handledning starts as soon as lecture is done._",
+    "**Lecture**: Tidyverse, Basic dplyr and ggplot2.[Slides], _We start at 9am. Handledning starts as soon as lecture is done._",
+    "Tidyverse: group_by and summarise, more ggplot2., _Peer review 08:45-09:30, handledning 09:30-11:30_",
+    "Exploratory data analysis, _Resubmissions 08:45-09:30, handledning 09:30-11:30_",
+    "Cleaning data: Tidy data. Long to wide and back., _Peer review 08:45-09:30, handledning 09:30-11:30_",
+    "Relational data: Combining tables with dplyr joins., _Resubmissions 08:45-09:30, handledning 09:30-11:30_",
+    "Relational data: SQL basics, _Peer review 08:45-09:30, handledning 09:30-11:30_",
     "**Guest lecture: TBA**,  Resubmission and handledning starts after lecture." ,
-    "[Text data: Regular expressions.](class_instructions/day9.html), _Peer review 08:45-09:30, handledning 09:30-11:30_",
-    "[Using APIs: httr, JSON and XML.](class_instructions/day10.html), _Resubmissions 08:45-09:30, handledning 09:30-11:30_",
-    "[R programming: Functional programming, aka functions!](class_instructions/day11.html), _Peer review 08:45-09:30, handledning 09:30-11:30_",
-    "[R Programming: Functional programming with purrr.](class_instructions/day12.html), _Resubmissions 08:45-09:30, handledning 09:30-11:30_",
-    "[Web-scraping: Basic rvest.](class_instructions/day13.html), _Peer review 08:45-09:30, handledning 09:30-11:30_",
-    "Zoom meeting with option for questions in preparation for exam! Resubmission of HW6 and project work.",
+    "Text data: Regular expressions., _Peer review 08:45-09:30, handledning 09:30-11:30_",
+    "Using APIs: httr, JSON and XML., _Resubmissions 08:45-09:30, handledning 09:30-11:30_",
+    "R programming: Functional programming, aka functions!, _Peer review 08:45-09:30, handledning 09:30-11:30_",
+    "R Programming: Functional programming with purrr., _Resubmissions 08:45-09:30, handledning 09:30-11:30_",
+    "Web-scraping: Basic rvest., _Peer review 08:45-09:30, handledning 09:30-11:30_",
+    "Zoom meeting with option for questions in preparation for exam! Work on resubmission of HW6 and project!",
     "Exam",
     "Project presentation.")
+
+# topics <- c(
+#     "[**Lecture**: Introduction. Software, GitHub and Markdown.](class_instructions/day1.html) [[Slides](slides/slide1.html)],  _We start at 9am. Handledning starts as soon as lecture is done._",
+#     "[**Lecture**: Tidyverse, Basic dplyr and ggplot2.](class_instructions/day2.html) [[Slides](slides/slide2.html)] [[Video](https://video.su.se/media/Dag%202%20-%20readr%2C%20dplyr%2C%20pipes%20%26%20ggplot/0_e7cf1v9a)], _We start at 9am. Handledning starts as soon as lecture is done._",
+#     "[Tidyverse: group_by and summarise, more ggplot2.](class_instructions/day3.html), _Peer review 08:45-09:30, handledning 09:30-11:30_",
+#     "[Exploratory data analysis](class_instructions/day4.html), _Resubmissions 08:45-09:30, handledning 09:30-11:30_",
+#     "[Cleaning data: Tidy data. Long to wide and back.](class_instructions/day5.html), _Peer review 08:45-09:30, handledning 09:30-11:30_",
+#     "[Relational data: Combining tables with dplyr joins.](class_instructions/day6.html), _Resubmissions 08:45-09:30, handledning 09:30-11:30_",
+#     "[Relational data: SQL basics](class_instructions/day7.html), _Peer review 08:45-09:30, handledning 09:30-11:30_",
+#     # "**Guest Lecture** 08:45: Jan Alexandersson, Quantitative analyst, Abios, will do a lecture on principles of visualisation. [[Slides](slides/slide14.html)], _Resubmission and handledning starts after lecture. There are no lecture notes today!_",
+#     "**Guest lecture: TBA**,  Resubmission and handledning starts after lecture." ,
+#     "[Text data: Regular expressions.](class_instructions/day9.html), _Peer review 08:45-09:30, handledning 09:30-11:30_",
+#     "[Using APIs: httr, JSON and XML.](class_instructions/day10.html), _Resubmissions 08:45-09:30, handledning 09:30-11:30_",
+#     "[R programming: Functional programming, aka functions!](class_instructions/day11.html), _Peer review 08:45-09:30, handledning 09:30-11:30_",
+#     "[R Programming: Functional programming with purrr.](class_instructions/day12.html), _Resubmissions 08:45-09:30, handledning 09:30-11:30_",
+#     "[Web-scraping: Basic rvest.](class_instructions/day13.html), _Peer review 08:45-09:30, handledning 09:30-11:30_",
+#     "Zoom meeting with option for questions in preparation for exam! Resubmission of HW6 and project work.",
+#     "Exam",
+#     "Project presentation.")
 
 ##
 ##Remove all links from topics. 
