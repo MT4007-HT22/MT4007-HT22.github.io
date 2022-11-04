@@ -31,7 +31,7 @@ datum <- unique(fromJSON(TimeEdit_URL, flatten = TRUE)$reservations) %>%
   filter(startdate>=ymd("2022-11-07"))
 topics <- c(
     "[**Introduction. Software, GitHub and Markdown.**](class_instructions/day1.html) [[Lecture Slides](slides/slide1.html)],  _We start at 9am. Handledning starts as soon as lecture is done._",
-    "[**Tidyverse, Basic dplyr and ggplot2**](class_instructions/day2.html). [[Lecture Slides]](slides/slide2.html), We start at 9am. Handledning starts as soon as lecture is done.",
+    "[**Tidyverse, Basic dplyr and ggplot2**](class_instructions/day2.html). [[Lecture Slides](slides/slide2.html)], We start at 9am. Handledning starts as soon as lecture is done.",
     "**Tidyverse: group_by and summarise, more ggplot2.**, Peer review 08:45-09:30, handledning 09:30-11:30",
     "**Exploratory data analysis.**, handledning 09:30-11:30",
     "**Cleaning data: Tidy data. Long to wide and back.**, Peer review 08:45-09:30, handledning 09:30-11:30",
