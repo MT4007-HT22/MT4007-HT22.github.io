@@ -22,7 +22,7 @@ HW <- c(
     "HW4: SQL and 6th graders",
     "HW5: Nobel tweets",
     "HW6: Nobel prize winning project",
-    "HW7: Cleanup!"
+    "HW: Re-exam"
     # "[HW2: Basic tidyverse](homework/HW2.html)",
     # "[HW3: Working with tables](homework/HW3.html)",
     # "[HW4: SQL and 6th graders](homework/HW4.html)",
@@ -30,6 +30,9 @@ HW <- c(
     # "[HW6: Nobel prize winning project](homework/HW6.html)",
     # "[HW7: Cleanup!](homework/HW7.html)"
 )
-deadline <- c(as.character(seq(as.Date("2022/11/13"), by = "week", length.out = 6)), "-TBA-")
-knitr::kable(data.frame(Homework = HW, Deadline = deadline))
+solve_unt <- c(as.character(seq(as.Date("2022/11/13"), by = "week", length.out = 6)), "-TBA-")
+deadline <- c(paste0(as.character(seq(as.Date("2022/11/13"), by = "week", length.out = 6) +2), " 6pm"), "-TBA-")
+
+knitr::kable(data.frame(Homework = HW, Solve=solve_unt, 
+                        Submission = deadline))
 ```
