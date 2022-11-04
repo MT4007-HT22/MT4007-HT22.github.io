@@ -9,8 +9,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-Six homework assignments should be solved and uploaded on GitHub at the latest **23:59** on their respective date of deadline. These should be solved individually. The assignments also involves peer review of another students solution - the deadline for this is the Wednesday following the Sunday deadline. Further information about the student peer review is typically provided at
-the [nyhetsforum](https://kurser.math.su.se/mod/forum/view.php?id=76566) of kurser.math.su.se.
+Six homework assignments are given on every Monday and should be solved and uploaded in your GitHub repository until Sunday **23:59**. On Monday morning, there is a round of peer review where you give and receive feedback to/from one fellow student. If necessary, you can then revise your solution. Final deadline for submission of the homework is on the following Tuesday 18:00. The tasks should be solved individually. 
 
 
 
