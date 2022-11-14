@@ -16,7 +16,7 @@ Six homework assignments are given on every Monday and should be solved and uplo
 ```{r, echo =FALSE}
 HW <- c(
     "[HW1: GitHub test-run](homework/HW1.html)",
-    "HW2: Basic tidyverse",
+    "[HW2: Basic tidyverse](homework/HW2.html)",
     "HW3: Working with tables",
     "HW4: SQL and 6th graders",
     "HW5: Nobel tweets",

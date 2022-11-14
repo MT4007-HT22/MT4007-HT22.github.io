@@ -1,7 +1,7 @@
 name: "MT4007"
 output_dir: "."
 navbar:
-  title: "Statical Data Processing (MT4007)"
+  title: "Statistical Data Processing (MT4007)"
   left:
     - text: "Home"
       href: index.html

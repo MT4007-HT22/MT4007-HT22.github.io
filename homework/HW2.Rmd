@@ -58,8 +58,6 @@ e.	In the same sheet there are two columns called `tot_antal_fall` and `nya_fall
 
 #### Statistics and plotting
 
-a.	Using the `summarise`, `across `and `where` function, reproduce the number of COVID-19 cases for each region as well as for the total (here named `Totalt_antal_fall`). Notice that this information can be found in another part of the sheet. What is the total number of cases? Which region has had most cases so far? Which has had the least? Argue why looking at counts might be misleading when comparing regions.
-b.	Plot the total number of diseased people since the 15th of March in a line chart.
-c.	Plot `tot_antal_fall` and `nya_fall_vecka` against their corresponding week number using `geom_col`.
-d.	How many rows are there in the dataframe used to produce the figures in c.? Compare that to the number of weeks/columns plotted in c. What did ggplot do without telling us? 
-**Hint:** Read the documentation.
+a.	Using the `summarise`, and `across` function, reproduce the number of COVID-19 cases for each region as well as for the total (here named `Totalt_antal_fall`) based on sheet 1 of the excel file. Notice that this information can be found in another part of the excel file. What is the total number of cases? Which region has had most cases so far? Which has had the least? Argue why looking at counts might be misleading when comparing regions.
+b.	Plot the daily number of reported cases (for whole Sweden) since the 15th of March in a line chart. Do the same for the cumulative number of reported cases (**Hint:** use the `cumsum` function inside of mutate). 
+c.	Derive the total number of cases per week in Sweden based on the column `Antal_fall_vecka` from sheet 7. Plot it as a barplot against the week number `veckonummer` using `geom_col()`.
