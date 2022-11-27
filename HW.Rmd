@@ -18,7 +18,7 @@ HW <- c(
     "[HW1: GitHub test-run](homework/HW1.html)",
     "[HW2: Basic tidyverse](homework/HW2.html)",
     "[HW3: Introduction to SQL and working with tables](homework/HW3.html)",
-    "HW4: SQL and 6th graders",
+    "[HW4: SQL and 6th graders](homework/HW4.html)",
     "HW5: Nobel tweets",
     "HW6: Nobel prize winning project",
     "HW: Re-exam"

@@ -1,0 +1,62 @@
+---
+title: "HW4: SQL and 6th graders"
+output: html_document
+---
+
+
+## Instructions
+Solutions to the exercises of this homework 4 should, just as for HW1-HW3, be written in an R-Markdown document with output: `github_document`. Both the R-Markdown document (*.Rmd*-file) and the compiled Markdown document (*.md* file), as well as any figures needed for properly rendering the Markdown file on GitHub, should be uploaded to your Homework repository as part of a `HW4` folder. Code should be written clearly in a consistent style, see in particular Hadley Wickham’s [tidyverse style guide](https://style.tidyverse.org/). As an example, code should be easily readable and avoid unnecessary repetition of variable names.
+
+Open the project `hw_data` and pull the most recent changes. If this does not work, delete the folder and clone a new version through an R project.
+
+### Deadline
+Deadline for this weeks peer review is 2022-12-04 at 23.59. Please create - as usual - a new issue with the title “HW4 ready for grading!” in your repository. Please also add a link from your repository’s README.md file to HW4/HW4.md. Final submission of your solution is 2022-12-04 at 18:00. Please check again that an issue with the title “HW4 ready for grading!” exists.
+
+
+### Exercise 1: SQL, SQl, Sql, sql!
+
+We are going to work with [hw_data/chinook.db](https://github.com/MT4007-HT22/hw_data/blob/master/chinook.db). The database represents a digital media store. It contains information on tracks, artists, composers and a lot more. There is a specification on the database and its tables in the file [hw_data/chinookDB.pdf](https://github.com/MT4007-HT22/hw_data/blob/master/chinookDB.pdf). In this pdf you can see how the tables relate to each other and what columns exist. All questions should be answered with SQL code, except for those who asks for plots. If we ask for a mean, use SQL to compute it.
+
+- Extract all data from the tracks table using dbReadTable and plot the UnitPrice in a histogram. Add the mean as a vertical line. Comment on your result.
+
+- Which genre has the least amount of tracks?
+
+- Which genre has the most amount of tracks in a single playlist?
+
+- Which Composer (which is not NA) has most tracks in a single playlist and what is that playlists name?
+
+
+### Exercise 2: Skoleverket’s information about 6th graders
+
+Data from this exercise originate from [Skolverket](https://www.skolverket.se/) and contain the grades of 6th graders from all elementary schools in Sweden. The [data](https://www.skolverket.se/skolutveckling/statistik/sok-statistik-om-forskola-skola-och-vuxenutbildning?sok=SokD&niva=K&omr=ak6&exp=72&lasar=2019&uttag=null) are freely available when aggregated at the [municipality level](https://en.wikipedia.org/wiki/Municipalities_of_Sweden) and consists of a CSV file [hw_data/exp_betyg_ak6_kommun_2018_19.csv](https://github.com/MT4007-HT22/hw_data/blob/master/exp_betyg_ak6_kommun_2018_19.csv) containing the results of the year 2018/2019. Skolverket provides some additional information about the content of the data, if you click on [“Analysstöd”](https://siris.skolverket.se/siris/ris.visa_analysstod?psRapport=gr6_betyg_amne&psAr=2019&psVerkformkod=11) at Skolverket’s data download page.
+
+Tasks
+- Read the data into R and restrict your attention to the results of “Samtliga” schools for each municipality. In what follows we shall analyse the average grade points in 23 subjects (Ämnen) contained in the data. Read the link called [“Analysstöd”](https://siris.skolverket.se/siris/ris.visa_analysstod?psRapport=gr6_betyg_amne&psAr=2019&psVerkformkod=11). Your solution should contain a description of how you deal with “.”, “..”, “-” and “~100” results when importing the data. If you get any warnings, describe what they are and why they appear. You may thereafter continue.
+
+- Make a plot which shows the difference of average grades between Boys and Girls in each county. Take into account that there is a difference in the numbers of girls and boys in each municipality and subject. Weight according to their respective counts. When you choose how you visualize your result, make the plot as easy as possible to interpret. Explain your choice of plot.
+
+- Make a map of Sweden where the municipalities are colored according to the event that the mean grade is higher in “Engelska” compared to “Idrott och hälsa” or not. In the csv file [kommun-karta.csv](https://github.com/MT4007-HT22/hw_data/blob/master/kommun_karta.csv) we provide the borders of the municipalities in Sweden in polygon format. You can use the following example code as a basis for your solution.
+
+```{r, eval=FALSE}
+kommun_karta <- read_csv("../../hw_data/kommun_karta.csv")
+ggplot(kommun_karta, aes(x = long, y = lat, group = group, fill = as.numeric(id))) +
+    geom_polygon() +
+    coord_fixed() +
+    theme_minimal()
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, cache=TRUE}
+library(tidyverse)
+kommun_karta <- read_csv("../../hw_data/kommun_karta.csv")
+ggplot(kommun_karta, aes(x = long, y = lat, group = group, fill = as.numeric(id))) +
+    geom_polygon() +
+    coord_fixed() +
+    #theme_void()
+    theme_minimal()
+```
+
+
+- What conclusions can be drawn from looking at the map you produce?
+
+- For each subject, compute the overall mean in Sweden. Do your conclusion in exercise c) still hold?
