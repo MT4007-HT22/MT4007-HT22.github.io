@@ -24,7 +24,7 @@ The below blog posts could be viewed as inspiration or to give a rough idea of t
 Look for more inspiration at, e.g., [R Weekly](https://rweekly.org/) or [R-Bloggers](https://www.r-bloggers.com/).
 
 Data sources: During the course, you were introduced to a lot of possible data sources.
-Additional public web based data sources could, e.g., be the [Stockholm Open Data Portal ](https://dataportalen.stockholm.se/dataportalen/).
+Additional public web based data sources could, e.g., be the [Stockholm Open Data Portal ](https://dataportalen.stockholm.se/dataportalen/) or an API to query data from [Sweden's national data portal](https://www.dataportal.se/en/datasets?p=1&q=&s=2&t=20&f=&rt=esterms_IndependentDataService%24esterms_ServedByDataService&c=false) .
 Another example of a contemporary website for relevant data is the [COVID-19 data](https://www.folkhalsomyndigheten.se/smittskydd-beredskap/utbrott/aktuella-utbrott/covid-19/statistik-och-analyser/bekraftade-fall-i-sverige/) page by the Swedish Folkhälsomyndigheten.
 
 ## Details
