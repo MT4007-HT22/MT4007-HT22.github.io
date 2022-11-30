@@ -13,7 +13,7 @@
 
 <title>Project (3hp, grade A-F)</title>
 
-<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -141,11 +141,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -241,7 +245,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Statical Data Processing (MT4007)</a>
+      <a class="navbar-brand" href="index.html">Statistical Data Processing (MT4007)</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -354,7 +358,7 @@ have any at all). Note: You can use the <a
 href="https://github.com/benmarwick/wordcountaddin"><code>wordcountaddin</code></a>
 for RStudio to count the words in your report.</li>
 <li>Create a 5 minute presentation about your work to present to your
-fellow students on 2022-01-14. The main aim of your presentation is to
+fellow students on 2023-01-12. The main aim of your presentation is to
 convince your fellow students that they should read your blog post. A
 template for this will be made available within the next days.</li>
 </ol>
@@ -370,11 +374,9 @@ then scale up iteratively, so you’re always ready. Start early.</p>
 <code>PR_&lt;username&gt;</code> GitHub repository as part of the <a
 href="https://github.com/MT4007-HT22">MT4007-HT22 organisation</a>,
 which only you and the teachers of the course have read/write access to
-(similar setup as your <code>HW_&lt;username&gt;</code> repo) You should
-make sub-directories <code>Data</code>, <code>R</code>,
-<code>Report</code> and <code>Presentation</code> and store all your
-files there. At the project deadline we will pull all repos, which have
-an issue “Project work submitted”.</p>
+(similar setup as your <code>HW_&lt;username&gt;</code> repo) and which
+follow a generic template. At the project deadline we will pull all
+repos, which have an issue “Project work submitted”.</p>
 <p>At submission, your repo should at least contain the following
 files:</p>
 <pre><code>PR_jensjensen/Report/report.Rmd
@@ -382,22 +384,25 @@ PR_jensjensen/Report/report.html
 PR_jensjensen/Presentation/presentation.Rmd
 PR_jensjensen/Presentation/presentation.html</code></pre>
 <p>where <code>jensjensen</code> is to be substituted with your GitHub
-user name. Note: It’s important to pick exactly the filenames as above,
-since we will extract report and presentation automatically from your
-repository. Furthermore, ensure that any support files like data files,
-graphics, etc. which are needed to compile the .Rmd documents, are part
-of the repository. One exception are data aquired by using private
-API-keys. To this end, make a <code>R/query_data.R</code> script, which
-imports the API key stored somewhere outside the git, does all the work
-and finally stores the data using <code>save</code> in the
-<code>Data</code> directory. Your R Markdown report should then access
-the data by using <code>load</code>.</p>
+user name. Note: It’s important to use <strong>exactly</strong> the
+filenames as above, since we will extract report and presentation
+automatically from your repository. Furthermore, ensure that any support
+files like data files, graphics, etc. which are needed to compile the
+.Rmd documents, are part of the repository. Similar to when creating R
+packages this would mean to put R preprocessing files in the folder
+<code>R</code> and data in a directory <code>data</code>. One exception
+are data aquired by using private API-keys. To this end, make a
+<code>R/query_data.R</code> script, which imports the API key stored
+somewhere outside the git, does all the work and finally stores the data
+using <code>save</code> in the <code>data</code> directory. Your R
+Markdown report should then access the data by using
+<code>load</code>.</p>
 <p>The data remain private as part of the
 <code>PW_&lt;username&gt;</code> repository, but your project report
 HTML-file will be made accessible to the teachers and students of the
 course.</p>
-<p>In contrast to the homework exercises we use HTML as backend, see
-e.g. <a
+<p>In contrast to the homework exercises we use HTML as backend for the
+project report, see e.g. <a
 href="https://bookdown.org/yihui/rmarkdown/html-document.html">Section
 3.1</a> of the <em>R Markdown: The definite guide</em> for options to
 customize. In order to ensure portability of the HTML reports please use
@@ -412,9 +417,7 @@ output:
     toc: true
     toc_depth: 2
 ---</code></pre>
-<p>Additional note: It’s possible that we succeed in creating a project
-repo template, which already contains some of the necessary files and
-directories.</p>
+<p>The template in your repo already contains these options.</p>
 <p>Final note: For the presentation the data wrangling steps do not need
 to be repeated. One can either import all data generated by
 <code>report.Rmd</code> using <code>load</code> or use some other type
@@ -425,15 +428,16 @@ of caching.</p>
 <p>The project will be graded based on the following five dimensions,
 which have equal weight:</p>
 <ol style="list-style-type: lower-alpha">
-<li>Technical difficulty of the project (e.g. how hard to get the data
+<li>Technical difficulty of the project, i.e. how hard to get the data
 imported, how much time needed to wrangle, how advanced are some of the
-methods to get statistical summaries, how original is the project
-idea)</li>
+methods to get statistical summaries, use of additional technical
+shenanigans<a href="#fn2" class="footnote-ref"
+id="fnref2"><sup>2</sup></a>, how original is the project idea</li>
 <li>Coding style and reproducibility of the Rmd file. This includes an
 assessment of, whether problems were solved tidyverse style.</li>
 <li>Quality of the visualisations and their interpretation.</li>
 <li>Readability of the project report (is the story concise, are the
-aims clear, is the readership happy, spelling &amp; grammar). In
+aims clear, is the readership happy, decent spelling &amp; grammar). In
 particular: Less is sometimes more!</li>
 <li>Quality of the presentation (slides, snore factor, <strong>staying
 in time</strong>, …)</li>
@@ -448,6 +452,12 @@ interface, please us the <a
 href="https://cran.r-project.org/web/packages/pxweb/index.html"><code>pxweb</code></a>
 package for this instead.<a href="#fnref1"
 class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Examples: using a <a
+href="https://books.ropensci.org/targets/"><code>targets</code>
+pipeline</a> (Sect. 10.1), visualize using an interactive <a
+href="https://shiny.rstudio.com/">Shiny app</a> , <a
+href="https://future.futureverse.org/">parallel computing</a>, …<a
+href="#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
 
