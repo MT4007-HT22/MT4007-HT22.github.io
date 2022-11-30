@@ -36,7 +36,7 @@ and should be accessible and uploadable to Github without violating any copyrigh
 b. determine a good story you can tell based on the data, e.g., a specific hypothesis you want to investigate, a cool visualization of numbers, a data journalism type of story, an educative `#rstats` post, something which might interest your fellow students. Your post can be about a serious matter, but it can also be a not so serious matter. However, make it clear before writing who is your intended readership (general public, fellow B.Sc. students, R users, ornotologists, ...)
 c. read the data, wrangle the data, visualize the data, make simple statistical summaries and interpret the results in accordance with the selected story you chose in b. 
 d. Write a story worthwhile reading for the selected target audience - it can be written in Swedish or English. The story needs to be written as a reproducible R-Markdown document with HTML backend (see technical details) and should not be excessively long. As a rough guideline: Between 1000-1500 words in the text, no more than 7 figures (tables count as figures). No more than 7 visible code chunks (if you decide to have any at all). Note: You can use the [`wordcountaddin`](https://github.com/benmarwick/wordcountaddin) for RStudio to count the words in your report.
-e. Create a 5 minute presentation about your work to present to your fellow students on 2023-01-12. The main aim of your presentation is to convince your fellow students that they should read your blog post. A template for this will be made available within the next days. 
+e. Create a 5 minute presentation about your work to present to your fellow students on 2023-01-12. The main aim of your presentation is to convince your fellow students that they should read your blog post. 
 
 The biggest challenge of the project will be to be realistic about what you can achieve within the given deadline. Once you have an estimate of how much that could be, take 50% of that and you are still likely to be busy. Make sure you have a working project early on and then scale up iteratively, so you're always ready. Start early.
 
@@ -78,7 +78,7 @@ Final note: For the presentation the data wrangling steps do not need to be repe
 
 The project will be graded based on the following five dimensions, which have equal weight:
 
-a. Technical difficulty of the project, i.e. how hard to get the data imported, how much time needed to wrangle, how advanced are some of the methods to get statistical summaries, use of additional technical shenanigans[^2], how original is the project idea
+a. Technical difficulty of the project, i.e. how hard to get the data imported, how much time needed to wrangle, how advanced are some of the methods to get statistical summaries, use of additional technical shenanigans[^2], 
 b. Coding style and reproducibility of the Rmd file. This includes an assessment of, whether problems were solved tidyverse style.
 c. Quality of the visualisations and their interpretation. 
 d. Readability of the project report (is the story concise, are the aims clear, is the readership happy, decent spelling & grammar). In particular: Less is sometimes more! 
