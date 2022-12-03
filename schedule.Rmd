@@ -38,11 +38,12 @@ topics <- c(
     "[**Relational data: Combining tables with dplyr joins.**](class_instructions/day6.html), handledning 09:30-11:30",
     "[**Relational data: SQL basics.**](class_instructions/day7.html), Peer review 08:45-09:30, handledning 09:30-11:30",
     "[**Text data: Regular expressions.**](class_instructions/day8.html), **Info on project by Michael 08:45-09:30**, handledning 09:30-11:30",
-    "**TBA**",
-    "**Using APIs: httr, JSON and XML.**, handledning 09:30-11:30",
-    "**R programming: Functional programming, aka functions!**, Peer review 08:45-09:30, handledning 09:30-11:30",
-    "**R Programming: Functional programming with purrr.**, handledning 09:30-11:30",
-    "**Web-scraping: Basic rvest.**, Peer review 08:45-09:30, handledning 09:30-11:30",
+    "[**Using APIs: httr, JSON and XML.**](class_instructions/day9.html), Peer review 08:45-09:30, handledning 09:30-11:30",
+
+    "**R programming: Functional programming, aka functions!**, handledning 09:30-11:30",
+    "**TBA**, Peer review 08:45-09:30, handledning 09:30-11:30",
+    "**TBA**, **Questions on project to Michael, time TBA**, handledning 09:30-11:30",
+    "**TBA**, Peer review 08:45-09:30, handledning 09:30-11:30",
     "Zoom meeting with option for questions in preparation for exam! Work on resubmission of HW6 and project!",
     "Exam",
     "Project presentation.")
