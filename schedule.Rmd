@@ -40,7 +40,7 @@ topics <- c(
     "[**Text data: Regular expressions.**](class_instructions/day8.html), **Info on project by Michael 08:45-09:30**, handledning 09:30-11:30",
     "[**Using APIs: httr, JSON and XML.**](class_instructions/day9.html), Peer review 08:45-09:30, handledning 09:30-11:30",
 
-    "**R programming: Functional programming, aka functions!**, handledning 09:30-11:30",
+    "[**R programming: Functional programming, aka functions!**](class_instructions/day10.html), handledning 09:30-11:30",
     "**TBA**, Peer review 08:45-09:30, handledning 09:30-11:30",
     "**TBA**, **Questions on project to Michael, time TBA**, handledning 09:30-11:30",
     "**TBA**, Peer review 08:45-09:30, handledning 09:30-11:30",
