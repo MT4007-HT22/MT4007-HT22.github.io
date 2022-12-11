@@ -1,0 +1,40 @@
+---
+title: "HW6: Nobel prize winning project"
+output: html_document
+---
+
+
+## Instructions
+Solutions to the exercises of this homework 6 should, just as for HW1-HW6, be written in an R-Markdown document with output: `github_document`. Both the R-Markdown document (*.Rmd*-file) and the compiled Markdown document (*.md* file), as well as any figures needed for properly rendering the Markdown file on GitHub, should be uploaded to your Homework repository as part of a `HW6` folder. Code should be written clearly in a consistent style, see in particular Hadley Wickham’s [tidyverse style guide](https://style.tidyverse.org/). As an example, code should be easily readable and avoid unnecessary repetition of variable names.
+
+### Exercise 1: Purrr
+In this exercise we will revisit the Nobel Foundation API known from HW5 and wrap its use with the `purrr` package. The aim of this question is for you to showcase your skills in `purrr` functionality.
+
+#### Tasks
+- Use the API to extract the id of all Nobel laureates in economics from 1969 to 2021. Use purrr functionality and the [http://api.nobelprize.org/2.1/laureates](http://api.nobelprize.org/2.1/laureates) endpoint to create a data.frame `laureates` containing five columns: `year`, `category` (always economics), `firstname`, `surname` and `id.` Make sure that you get all of the laureates. **Note**: It might be worthwhile to cache the result of your query using `cache=TRUE` in the code chunk of the knitr document in order to avoid calling the API whenever you compile your document.
+
+- Using the `http://api.nobelprize.org/2.1/laureate/{laureateID}` endpoint in the API and `purrr` functionality, iterate over all the above `ids` in laureates. For each id determine the `day of birth` and the `gender` of the Laureate in economics. Add these as columns `day_of_birth` and `gender` to the above `laureates` frame and store the result in a data.frame denoted `laureates_info`. *Note*: It might be worthwhile to cache the result of your query using `cache=TRUE` in the code chunk of the knitr document in order to avoid calling the API whenever you compile your document.
+
+- What is the proportion of female laureates among all current in economics?
+
+- Assuming that the award is given on the 1st of December every year it is given, compute the age (in years) at the time of the award for each laureate and add this to the `laureates_info` frame. Illustrate this age as a function of the award year for the laureates. Also add an appropriate smooth function using `geom_smooth.` Interpret the overall result, i.e. how has age at the time of the award evolved with time.
+
+
+
+### Exercise 2: Starting your project
+
+One part of the examination of this course is that you are going to demonstrate all the acquired skills from this course as part of a project. For this read the course instructions about the [project work](https://mt4007-ht22.github.io/project.html).
+
+**Note**: You can always ask on the course forums or in class! However, you are, to some degree, in charge of your own for the project. That implies that it is you who decide what you want to include in the project, just as it is with a Bachelors thesis!
+
+#### Tasks
+
+- State a catchy title for your project.
+
+- Provide a short text (~200-300 words) about the story you want to write. Include a specification of your intended readership for the blog-post (i.e. the report).
+
+- Describe your data source in some detail, i.e. the format, the availability, the volume (e.g. how many rows, how many different tables) etc. The availability could, e.g., be an URL or who you have to contact to get the data. Please also indicate, whether you already got the data or if you are still in the search process.
+
+- State in 2-3 sentences what you currently experience as the greatest element of uncertainty in terms of what is expected of you for the project work?
+
+- State in 2-3 sentences what you think will be your biggest technical challenge during the project work?
