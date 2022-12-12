@@ -7,20 +7,20 @@ output:
     toc_depth: 2
 ---
 
-An electronic exam,  1.5 hp, is scheduled on  **2023-01-05**. It will be a open book home exam and its allowed to use google. We reserve the right to conduct an oral exam after the exam, e.g., when we are correcting the exam. If you are subject to the oral exam, you will need to describe your code, what it does and why you chose to solve the question(s) the way you did. This will test your skills in using the tools introduced in the course and involves live coding in an RStudio environment with internet access. Here is some further information
+An electronic exam,  1.5 hp, is scheduled on  **2023-01-05, 12:00-16:00**. It will be a open book home exam and its allowed to use google. We reserve the right to conduct an oral exam after the exam, e.g., when we are correcting the exam. If you are subject to the oral exam, you will need to describe your code, what it does and why you chose to solve the question(s) the way you did. This will test your skills in using the tools introduced in the course and involves live coding in an RStudio environment with internet access. Here is some further information
 
 1. There will be four questions, at least one of them will be from the class questions listed below.
-2. The exam will be available on [here, on Github on the 05/01 12:00](https://github.com/MT4007-HT22/exam_20230501) which you will download (however you choose to). 
+2. The exam will be available [here, on Github on the 05/01 12:00](https://github.com/MT4007-HT22/) which you will download (however you choose to). 
 3. **You hand in your exam answers in a .Rmd (code and accompanying text) through [this link](https://kurser.math.su.se/mod/assign/view.php?id=76579). If you have extended time for the exam (förlängd skrivningstid) then its [this link](https://kurser.math.su.se/mod/assign/view.php?id=76580).**
 
 List of questions from the class questions which might appear in the exam:
 
 * Day 2-3: All exercises (and/or sections thereof)
-* Day 4: systembolaget, winter medals
+* Day 4: winter medals
 * Day 5: all exercises
-* Day 6: all exercises (not the last optional)
+* Day 6: all exercises
 * Day 7: all exercises
-* Day 9: A csv-reader, Motions of the Riksdag, Sentiment of the people of Hemsö
+* Day 8: A csv-reader, Motions of the Riksdag, Sentiment of the people of Hemsö
 
 Use the following set of code to verify that you have the appropriate packages installed.
 
