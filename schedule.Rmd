@@ -42,7 +42,7 @@ topics <- c(
 
     "[**R programming: Functional programming, aka functions!**](class_instructions/day10.html), handledning 09:30-11:30",
     "[**Intro to Webscraping**](class_instructions/day11.html), Peer review 08:45-09:30, handledning 09:30-11:30",
-    "[**R Programming: Functional programming with purrr**](class_instructions/day12.html), **Questions on project to Michael, time TBA**, handledning 09:30-11:30",
+    "[**R Programming: Functional programming with purrr**](class_instructions/day12.html), **Questions on project to Michael: 9AM, check Moodle for Zoom-link!**, handledning 09:30-11:30",
     "**Wrap-up and option for questions**, Peer review 08:45-09:30, handledning 09:30-11:30",
     "Zoom meeting with option for questions in preparation for exam! Work on project!",
     "Exam",
